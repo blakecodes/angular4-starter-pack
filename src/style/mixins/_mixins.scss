@@ -1,0 +1,183 @@
+
+/* ********
+*
+* All Color Variables
+*
+*/
+
+  // Primary Application Colors
+    $dnrsgold: #B68B26;
+
+    $dnrsgolddark: #694D0B;
+    $dnrsgoldlight: #FFCA4F;
+
+    $dnrsgreen: #1EC283;
+    
+    $dnrspurpledark: #520069;
+    $dnrspurple: #6A1483;
+    
+    $dnrspurple_lightest: lighten($dnrspurple, 30%);
+    $dnrspurple_lighter: lighten($dnrspurple, 20%);
+    $dnrspurple_light: lighten($dnrspurple, 10%);
+    $dnrspurple_dark: darken($dnrspurple, 10%);
+    $dnrspurple_darker: darken($dnrspurple, 15%);
+    $dnrspurple_darkest: darken($dnrspurple, 20%);
+    
+    $dnrsblue: #0277bd;
+    $dnrsbluelight: lighten($dnrsblue, 15%);
+    
+	$grey_darkest  : rgb(33,33,33);
+	$grey_lightest : lighten($grey_darkest, 100%);
+	$grey_lighter  : lighten($grey_darkest, 82%);
+	$grey_light    : lighten($grey_darkest, 72%);
+	$grey_medium   : lighten($grey_darkest, 50%);
+	$grey_dark     : lighten($grey_darkest, 28%);
+	$grey_darker   : lighten($grey_darkest, 10%);
+    
+    $fontcolordark: $grey_darkest; 
+    $fontcolorlight: #f2f2f2; 
+    
+    
+    $info: #d9edf7;
+    $info_text: #31708f;
+    $info_border: darken($info, 20%);
+    
+    $success: #dff0d8;
+    $success_text: #3c763d;
+    $success_border: darken($success, 15%);
+    
+    
+    $warning: #f0ad4e;
+
+    $warn: #ffe9da;
+    $warn_text: #d35400;
+    $warn_border: #ea7b31;
+    
+    $danger: #f2dede;
+    $danger_text: #a94442;
+    $danger_border: darken($danger, 15%);
+    
+    
+  
+  // Accent Colors
+    $deepred: #D71F4B;
+    $red: #EA7882;
+    $lightred: #F09FA6;
+    $brightblue: #003BFF;
+    $darkblue: #4A90E2;
+    $blue: #79B0EC;
+    $lightblue50: #D2E0EB;
+    $lightblue: #A0C7F2;
+    $hoverblue: #E5EFFB;
+    $purple: #B4A1DD;
+    $lightpurple50: #C1B2E3;
+    $lightpurple: #D3C9EB;
+    $darkbrown: #AB4F45;
+    $brown: #A8553A;
+    $brown75: #C36849;
+    $brown60: #C67055;
+    $brown50: #D67F6B;
+    $brownishgreen: #948266;
+    $orange: #FFC497;
+    $paleorange: #EA8564;
+    $pinkishred: #EF6B5D;
+    $orange75: #EE682F;
+    $orange65: #FA824F;
+    $orange45: #FFC9A0;
+    $darkorange: #EBA068;
+    $lightorange: #FFD3B1;
+    $darkgreen: #306C67;
+    $darkgreen85: #36845E;
+    $darkgreen75: #518F41;
+    $darkgreen65: #66A655;
+    $darkgreen55: #68BD80;
+    $darkgreen50: #55A69F;
+    $darkgreen45: #2EB398;
+    $darkgreen40: #44C1AC;
+    $green: #55C9A6;
+    $lightgreen: #7CD5BA;
+    $hovergreen: #E5F7F1;
+    $brightyellow: #FCB621;
+    $brightyellow75: #F3C557;
+    $brightyellow65: #EDBC6C;
+    $yellow: #FADD7F;
+    $paleyellow: #DEBC85;
+    $lightyellow: #FBE499;
+    $hoveryellow: #FFF1E7;
+    $pink: #E299B7;
+    $lightpink: #ECBCD0;
+    $paleblue: #A5C7EC;
+    $palegreen: #A0DFCC;
+    $palepink: #E394B3;
+    $brownishgray: #64584C;
+    $brownishgray75: #776B5F;
+    $gray: #EAEAEA;
+    $darkgray: #999999;
+    $darkgray75: lighten($darkgray, 25%);
+    $darkgray50: lighten($darkgray, 50%);
+    $darkgray40: lighten($darkgray, 60%);
+    $darkgray25: lighten($darkgray, 75%);
+    $lightgray: #EEEDEB;
+    $lightgray50: #F1F0EE;
+    $white: #ffffff;
+    $black: #000000;
+    $black75: #3F3F3B;
+    $black50: #3B4648;
+    $davygray: #555555;
+    $darkgrayishblue75: #43525A;
+    $darkgrayishblue: #4C5D67;
+    $desaturateddarkblue: #515E78;
+    $desaturateddarkblue75: #3B465C;
+    $darkcyan: #68A0A5;
+    $grayishcyan: #92BDC1;
+
+/*
+*
+* End: All Color Variables
+*
+******** */
+
+
+/* ********
+*
+* All Functions
+*
+*/
+@mixin gradient( $start, $end, $start_point: 0%, $stop_point: 100% )  {
+    background: $start; /* Old browsers */
+    background: -moz-linear-gradient(top, $start $start_point, $end $stop_point,$end); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop($start_point,$start), color-stop($stop_point,$end)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, $start 0% ,$end 100% ); /* Chrome10+,Safari5.1+ */
+    background-image: -ms-linear-gradient(top, $start $start_point,$end $stop_point); /* IE10+ */
+    background: -o-linear-gradient(top, $start $start_point,$end $stop_point); /* Opera11.10+ */
+    filter    : e("progid:DXImageTransform.Microsoft.gradient( startColorstr=${start}, endColorstr=${end},GradientType=0 )"); /* IE6-9 */
+    background: linear-gradient(top, $start $start_point,$end $stop_point); /* W3C */
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+    -webkit-box-shadow:$top $left $blur $color #{$inset};
+    -moz-box-shadow:$top $left $blur $color #{$inset};
+    box-shadow:$top $left $blur $color #{$inset};
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+
+@mixin transition($type, $speed, $easing) {
+    -webkit-transition: $type $speed $easing;
+    -moz-transition: $type $speed $easing;
+    -ms-transition: $type $speed $easing;
+    -o-transition: $type $speed $easing;
+    transition: $type $speed $easing;
+}
+
+/*
+*
+* End: All Functions
+*
+******** */

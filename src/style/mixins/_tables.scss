@@ -1,0 +1,41 @@
+
+table {
+    &.table {
+        tr {
+            td {
+                vertical-align: middle;
+            }
+        }
+    }
+
+    tr {
+        td {
+            vertical-align: middle;
+        }
+
+        &.filter-row {
+            td {
+                text-align: center;
+                padding: 0;
+                line-height: inherit;
+                border-top: 0;
+
+                input, select {
+                    border: 1px solid $grey_light;
+                    border-radius: 0;
+                    margin: 2px 0;
+                    width: 98%;
+                    min-width: 98%;
+                    height: 100%!important;
+                    line-height: inherit;
+                    padding: 8px 4px;
+                }
+
+                select {
+                    padding: 7px 4px;
+                }
+            }
+        }
+    }
+
+}

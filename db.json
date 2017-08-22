@@ -1,0 +1,1108 @@
+{
+    "emptycall": {
+        "success": true
+    },
+    "account": {
+        "id": 1,
+        "firstName": "Justin",
+        "lastName": "Jiles",
+        "emailAddress": "jj@seqtechllc.com",
+        "phoneNumber": "9185551212"
+    },
+    "login": {
+        "apikey": "2919aaa34c53053521beb9a0afd8d83d",
+        "context": "was",
+        "secret": "3b8ebeeae3f805266f49561e4f2320ec",
+        "username": "user@domain.com"
+    },
+    "companyType": [],
+    "companies": [
+        {
+            "id": 1,
+            "slug": "abcdef12345",
+            "name": "American Airlines",
+            "typeId": "1"
+        },
+        {
+            "id": 2,
+            "slug": "987654abcdef",
+            "name": "Southwest Airlines",
+            "typeId": "2"
+        }
+    ],
+    "aircraftMakes": [
+        {
+            "id": 1,
+            "name": "Cirrus Design Corp",
+            "manufacturerTypeId": 1
+        },
+        {
+            "id": 2,
+            "name": "Bombardier",
+            "manufacturerTypeId": 1
+        }
+    ],
+    "aircraftModels": [
+        {
+            "id": 1,
+            "models": [
+                {
+                    "name": "Challenger 300",
+                    "year": 2004,
+                    "manufacturerId": 2
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "models": [
+                {
+                    "name": "Challenger 300",
+                    "year": 2004,
+                    "manufacturerId": 2
+                }
+            ]
+        }
+    ],
+    "engineMakes": [
+        {
+            "id": 1,
+            "name": "Honeywell",
+            "manufacturerTypeId": 1
+        },
+        {
+            "id": 2,
+            "name": "Chevy",
+            "manufacturerTypeId": 2
+        }
+    ],
+    "engineModels": [
+        {
+            "id": 1,
+            "models": [
+                {
+                    "id": 1,
+                    "name": "AS907-1-1A",
+                    "year": 0,
+                    "manufacturerId": 1
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "models": [
+                {
+                    "id": 1,
+                    "name": "Small Block 305",
+                    "year": 0,
+                    "manufacturerId": 2
+                },
+                {
+                    "id": 2,
+                    "name": "Big Block 350",
+                    "year": 0,
+                    "manufacturerId": 2
+                }
+            ]
+        }
+    ],
+    "claims": [
+        {
+            "id": 1,
+            "slug": "abcdef12345",
+            "name": "American Airlines",
+            "typeId": "1",
+            "claims": [
+                {
+                    "id": 1,
+                    "claimNo": "46245645624",
+                    "claimDate": "10/15/2016",
+                    "status": "Active",
+                    "registration": "N60SB",
+                    "aircraftYear": "2004",
+                    "aircraftMake": "Bombardier",
+                    "aircraftModel": "Challenger 300",
+                    "aircraftSerialNo": 20019,
+                    "aircraftTotalTime": 4019.6,
+                    "airframeTotalCycles": 2256,
+                    "engineMake": "Honeywell",
+                    "engineModel": "AS907-1-1A",
+                    "engineSerialNo": 118151,
+                    "engineTimeSinceNew": 4019.6,
+                    "engineCyclesSinceNew": 2256,
+                    "engineSide": "Left",
+                    "owner": "Pelton Acquisitions LLC",
+                    "ownerStreetAddress": "2352 Main Street Ste 201",
+                    "ownerCity": "Concord",
+                    "ownerStateProvince": "Massachusetts",
+                    "ownerPostalCode": "01742",
+                    "ownerCountry": "USA",
+                    "incident": "FOD ingestion",
+                    "billOfWork": "Dissambly, cleaning, inspection, repair ass necessary, reassembly, and test run"
+                },
+                {
+                    "id": 2,
+                    "claimNo": "4567567345",
+                    "claimDate": "10/15/2016",
+                    "status": "Active",
+                    "registration": "N60SB",
+                    "aircraftYear": "2004",
+                    "aircraftMake": "Bombardier",
+                    "aircraftModel": "Challenger 300",
+                    "aircraftSerialNo": 20019,
+                    "aircraftTotalTime": 4019.6,
+                    "airframeTotalCycles": 2256,
+                    "engineMake": "Honeywell",
+                    "engineModel": "AS907-1-1A",
+                    "engineSerialNo": 118151,
+                    "timeSinceNew": 4019.6,
+                    "cyclesSinceNew": 2256,
+                    "engineSide": "Left",
+                    "owner": "Pelton Acquisitions LLC",
+                    "ownerStreetAddress": "2352 Main Street Ste 201",
+                    "ownerCity": "Concord",
+                    "ownerStateProvince": "Massachusetts",
+                    "ownerPostalCode": "01742",
+                    "ownerCountry": "USA",
+                    "incident": "FOD ingestion",
+                    "billOfWork": "Dissambly, cleaning, inspection, repair ass necessary, reassembly, and test run"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "slug": "987654abcdef",
+            "name": "Southwest Airlines",
+            "typeId": "2",
+            "claims": [
+                {
+                    "id": 1,
+                    "claimNo": "3414324234",
+                    "claimDate": "10/15/2016",
+                    "status": "Active",
+                    "registration": "N60SB",
+                    "aircraftYear": "2004",
+                    "aircraftMake": "Bombardier",
+                    "aircraftModel": "Challenger 300",
+                    "aircraftSerialNo": 20019,
+                    "aircraftTotalTime": 4019.6,
+                    "airframeTotalCycles": 2256,
+                    "engineMake": "Honeywell",
+                    "engineModel": "AS907-1-1A",
+                    "engineSerialNo": 118151,
+                    "timeSinceNew": 4019.6,
+                    "cyclesSinceNew": 2256,
+                    "engineSide": "Left",
+                    "owner": "Pelton Acquisitions LLC",
+                    "ownerStreetAddress": "2352 Main Street Ste 201",
+                    "ownerCity": "Concord",
+                    "ownerStateProvince": "Massachusetts",
+                    "ownerPostalCode": "01742",
+                    "ownerCountry": "USA",
+                    "incident": "FOD ingestion",
+                    "billOfWork": "Dissambly, cleaning, inspection, repair ass necessary, reassembly, and test run"
+                },
+                {
+                    "id": 2,
+                    "claimNo": "57985789758",
+                    "claimDate": "10/15/2016",
+                    "status": "Active",
+                    "registration": "N60SB",
+                    "aircraftYear": "2004",
+                    "aircraftMake": "Bombardier",
+                    "aircraftModel": "Challenger 300",
+                    "aircraftSerialNo": 20019,
+                    "aircraftTotalTime": 4019.6,
+                    "airframeTotalCycles": 2256,
+                    "engineMake": "Honeywell",
+                    "engineModel": "AS907-1-1A",
+                    "engineSerialNo": 118151,
+                    "timeSinceNew": 4019.6,
+                    "cyclesSinceNew": 2256,
+                    "engineSide": "Left",
+                    "owner": "Pelton Acquisitions LLC",
+                    "ownerStreetAddress": "2352 Main Street Ste 201",
+                    "ownerCity": "Concord",
+                    "ownerStateProvince": "Massachusetts",
+                    "ownerPostalCode": "01742",
+                    "ownerCountry": "USA",
+                    "incident": "FOD ingestion",
+                    "billOfWork": "Dissambly, cleaning, inspection, repair ass necessary, reassembly, and test run"
+                }
+            ]
+        }
+    ],
+    "review": {
+        "id": 1,
+        "companyId": 1,
+        "claimNo": "111-111",
+        "claimDate": "2016-11-11T00:00:00",
+        "description": "Landing Gear",
+        "vendorId": 1,
+        "companyName": "American Airlines",
+        "parts": [
+            {
+                "id": 0,
+                "partNo": "502",
+                "description": "LATEX GLOVES",
+                "fullDescription": "502: LATEX GLOVES",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "7781",
+                "description": "FIBERGLASS CLOTH",
+                "fullDescription": "7781: FIBERGLASS CLOTH",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "58253",
+                "description": "ROLLER FRAME",
+                "fullDescription": "58253: ROLLER FRAME",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "11575-001",
+                "description": "\"SPACER, AXLE, MAIN LANDING GEAR\"",
+                "fullDescription": "11575-001: \"SPACER, AXLE, MAIN LANDING GEAR\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "13447-001",
+                "description": "\"WHEEL PANT MOUNT, AXLE\"",
+                "fullDescription": "13447-001: \"WHEEL PANT MOUNT, AXLE\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "14075-008",
+                "description": "TIRE",
+                "fullDescription": "14075-008: TIRE",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "14076-002",
+                "description": "TUBE",
+                "fullDescription": "14076-002: TUBE",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "15473-101",
+                "description": "\"SEAL, RUBBER\"",
+                "fullDescription": "15473-101: \"SEAL, RUBBER\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "16937-002",
+                "description": "GROMMET",
+                "fullDescription": "16937-002: GROMMET",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "16939-002",
+                "description": "\"CLAMP, GEAR ATTACH LOWER\"",
+                "fullDescription": "16939-002: \"CLAMP, GEAR ATTACH LOWER\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "16940-001",
+                "description": "UPPER GEAR ATTACH",
+                "fullDescription": "16940-001: UPPER GEAR ATTACH",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "16947-001",
+                "description": "\"STRUT END, UPPER FITTING\"",
+                "fullDescription": "16947-001: \"STRUT END, UPPER FITTING\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "18103-003",
+                "description": "\"FITTING, AXLE\"",
+                "fullDescription": "18103-003: \"FITTING, AXLE\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "18138-003",
+                "description": "\"ACCESS PANEL, LH\"",
+                "fullDescription": "18138-003: \"ACCESS PANEL, LH\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "18138-004",
+                "description": "\"ACCESS PANEL, RH\"",
+                "fullDescription": "18138-004: \"ACCESS PANEL, RH\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "18361-001",
+                "description": "GROMMET",
+                "fullDescription": "18361-001: GROMMET",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "18362-001",
+                "description": "GROMMET",
+                "fullDescription": "18362-001: GROMMET",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "18957-004",
+                "description": "\"RECOGNITION LIGHT ASSEMBLY, RH\"",
+                "fullDescription": "18957-004: \"RECOGNITION LIGHT ASSEMBLY, RH\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "18988-003",
+                "description": "\"FAIRING, STRUT, UPPER, LH\"",
+                "fullDescription": "18988-003: \"FAIRING, STRUT, UPPER, LH\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "18988-004",
+                "description": "\"FAIRING, STRUT, UPPER, RH\"",
+                "fullDescription": "18988-004: \"FAIRING, STRUT, UPPER, RH\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "2032-QT",
+                "description": "RESIN",
+                "fullDescription": "2032-QT: RESIN",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "21119-301",
+                "description": "COMPRESSOR",
+                "fullDescription": "21119-301: COMPRESSOR",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "24660-004",
+                "description": "CO DETECTOR",
+                "fullDescription": "24660-004: CO DETECTOR",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "25019-015",
+                "description": "SHIM",
+                "fullDescription": "25019-015: SHIM",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "26393-002",
+                "description": "\"PLATE, DOUBLER\"",
+                "fullDescription": "26393-002: \"PLATE, DOUBLER\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "26397-001",
+                "description": "\"BRACKET, ANGLE\"",
+                "fullDescription": "26397-001: \"BRACKET, ANGLE\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "26607-001",
+                "description": "FAIRING NOSE LANDING GEAR STRUT ASSEMBLY",
+                "fullDescription": "26607-001: FAIRING NOSE LANDING GEAR STRUT ASSEMBLY",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "26607-101",
+                "description": "FAIRING NOSE LANDING GEAR STRUT ",
+                "fullDescription": "26607-101: FAIRING NOSE LANDING GEAR STRUT ",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "26720-001",
+                "description": "SHIM",
+                "fullDescription": "26720-001: SHIM",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "26861-001",
+                "description": "\"WHEEL PANT ASSY, LH\"",
+                "fullDescription": "26861-001: \"WHEEL PANT ASSY, LH\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "26861-101",
+                "description": "\"WHEEL PANT, LH\"",
+                "fullDescription": "26861-101: \"WHEEL PANT, LH\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "26861-102",
+                "description": "\"WHEEL PANT, RH\"",
+                "fullDescription": "26861-102: \"WHEEL PANT, RH\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "26880-001",
+                "description": "ACCESS DOOR",
+                "fullDescription": "26880-001: ACCESS DOOR",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "26960-001",
+                "description": "NOSE GEAR FAIRING ASSEMBLY",
+                "fullDescription": "26960-001: NOSE GEAR FAIRING ASSEMBLY",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "28439-001",
+                "description": "ACCESS DOOR",
+                "fullDescription": "28439-001: ACCESS DOOR",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "28439-002",
+                "description": "ACCESS DOOR",
+                "fullDescription": "28439-002: ACCESS DOOR",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "29147-001",
+                "description": "\"STRUT ASSEMBLY, LH\"",
+                "fullDescription": "29147-001: \"STRUT ASSEMBLY, LH\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "29147-002",
+                "description": "\"STRUT ASSEMBLY, RH\"",
+                "fullDescription": "29147-002: \"STRUT ASSEMBLY, RH\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "29148-001",
+                "description": "STRUT",
+                "fullDescription": "29148-001: STRUT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "29149-001",
+                "description": "\"BRACKET, WHEEL FAIRING, INBOARD\"",
+                "fullDescription": "29149-001: \"BRACKET, WHEEL FAIRING, INBOARD\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "29199-002",
+                "description": "\"STRAP,  LIGHTNING\"",
+                "fullDescription": "29199-002: \"STRAP,  LIGHTNING\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "31491-001",
+                "description": "AXLE",
+                "fullDescription": "31491-001: AXLE",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "31491-004",
+                "description": "NUT",
+                "fullDescription": "31491-004: NUT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "31493-001",
+                "description": "MAIN WHEEL ASSEMBLY",
+                "fullDescription": "31493-001: MAIN WHEEL ASSEMBLY",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "37364-001",
+                "description": "\"LIGHT, READING, BLACK\"",
+                "fullDescription": "37364-001: \"LIGHT, READING, BLACK\"",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "50525-101",
+                "description": "CAP",
+                "fullDescription": "50525-101: CAP",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "50649-001",
+                "description": "BUSHING",
+                "fullDescription": "50649-001: BUSHING",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "51378-001",
+                "description": "SPEED NUT U TYPE",
+                "fullDescription": "51378-001: SPEED NUT U TYPE",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "58253A",
+                "description": "ROLLER COVER",
+                "fullDescription": "58253A: ROLLER COVER",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "836-M",
+                "description": "COVERALLS",
+                "fullDescription": "836-M: COVERALLS",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "AN525-416R8",
+                "description": "SCREW",
+                "fullDescription": "AN525-416R8: SCREW",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "AN525-832R11",
+                "description": "SCREW",
+                "fullDescription": "AN525-832R11: SCREW",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "AN525-832R7",
+                "description": "SCREW",
+                "fullDescription": "AN525-832R7: SCREW",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "AN525-832R8",
+                "description": "SCREW",
+                "fullDescription": "AN525-832R8: SCREW",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "AN6-13A",
+                "description": "BOLT (CLAMP)",
+                "fullDescription": "AN6-13A: BOLT (CLAMP)",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "AN6-15A",
+                "description": "BOLT",
+                "fullDescription": "AN6-15A: BOLT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "AN6-20A",
+                "description": "BOLT",
+                "fullDescription": "AN6-20A: BOLT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "AN6-21A",
+                "description": "BOLT",
+                "fullDescription": "AN6-21A: BOLT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "AN6-23A",
+                "description": "BOLT",
+                "fullDescription": "AN6-23A: BOLT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "AN6-24A",
+                "description": "BOLT",
+                "fullDescription": "AN6-24A: BOLT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "AN6-27A",
+                "description": "BOLT",
+                "fullDescription": "AN6-27A: BOLT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "AN6-30A",
+                "description": "BOLT",
+                "fullDescription": "AN6-30A: BOLT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "AN8-22A",
+                "description": "BOLT",
+                "fullDescription": "AN8-22A: BOLT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "CM0570180GA",
+                "description": "PAINT",
+                "fullDescription": "CM0570180GA: PAINT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "MS20995C-020",
+                "description": "SAFETY WIRE",
+                "fullDescription": "MS20995C-020: SAFETY WIRE",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "MS21025-24",
+                "description": "NUT",
+                "fullDescription": "MS21025-24: NUT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "MS21042-6",
+                "description": "NUT",
+                "fullDescription": "MS21042-6: NUT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "MS21044N7",
+                "description": "NUT",
+                "fullDescription": "MS21044N7: NUT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "MS21044N8",
+                "description": "NUT",
+                "fullDescription": "MS21044N8: NUT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "MS21059L08",
+                "description": "NUTPLATE",
+                "fullDescription": "MS21059L08: NUTPLATE",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "MS24665-360",
+                "description": "COTTER PIN",
+                "fullDescription": "MS24665-360: COTTER PIN",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "MS27039-0806",
+                "description": "SCREW",
+                "fullDescription": "MS27039-0806: SCREW",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "NAS1149D0616K",
+                "description": "WASHER",
+                "fullDescription": "NAS1149D0616K: WASHER",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "NAS1149D0632K",
+                "description": "WASHER",
+                "fullDescription": "NAS1149D0632K: WASHER",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "NAS1149D0663K",
+                "description": "WASHER",
+                "fullDescription": "NAS1149D0663K: WASHER",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "NAS1149D0716K",
+                "description": "WASHER",
+                "fullDescription": "NAS1149D0716K: WASHER",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "NAS1149D0763K",
+                "description": "WASHER",
+                "fullDescription": "NAS1149D0763K: WASHER",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "NAS1149D0832K",
+                "description": "WASHER",
+                "fullDescription": "NAS1149D0832K: WASHER",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "NAS1149F0432P",
+                "description": "WASHER",
+                "fullDescription": "NAS1149F0432P: WASHER",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "NAS1149FN816P",
+                "description": "WASHER",
+                "fullDescription": "NAS1149FN816P: WASHER",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "NAS6207-54D",
+                "description": "BOLT (ATTACH)",
+                "fullDescription": "NAS6207-54D: BOLT (ATTACH)",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "NAS6606-30",
+                "description": "BOLT",
+                "fullDescription": "NAS6606-30: BOLT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "NAS6606-31",
+                "description": "BOLT",
+                "fullDescription": "NAS6606-31: BOLT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "NAS6606-40",
+                "description": "BOLT",
+                "fullDescription": "NAS6606-40: BOLT",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "NAS8102U8",
+                "description": "PAN HEAD SCREW",
+                "fullDescription": "NAS8102U8: PAN HEAD SCREW",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            },
+            {
+                "id": 0,
+                "partNo": "NAS8103U8",
+                "description": "PAN HEAD SCREW",
+                "fullDescription": "NAS8103U8: PAN HEAD SCREW",
+                "quantity": 0,
+                "manufacturerId": 0,
+                "modelId": 0,
+                "matchStatus": "available"
+            }
+        ],
+        "covered": [],
+        "uncovered": []
+    }
+}

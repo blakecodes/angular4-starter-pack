@@ -1,0 +1,107 @@
+
+.catalog-chapters {
+    .chapter-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .catalog-chapter {
+            margin: 0;
+            padding: 4px;
+            width: 24px;
+            height: 24px;
+            border: 1px solid $red;
+        }
+    }
+}
+
+.image-map-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.2);
+
+    .image-map-overlay {
+        position: absolute;
+        background: $grey_lightest;
+        width: auto;
+        margin: 24px auto;
+        padding: 12px;
+        @include box-shadow(0, 0, 12px, rgba(0,0,0,0.2));
+
+
+        .image-map-top-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 24px;
+            background: $blue;
+
+            .fa {
+                cursor: pointer;
+                float: right;
+                margin: 6px 8px 0 0;
+                color: $grey_lightest;
+
+                &:hover {
+                    color: $red;
+                }
+
+            }
+        }
+
+        .image-map-image {
+            float: left;
+            margin-top: 24px;
+        }
+
+        .area-list {
+            float: left;
+            width: 250px;
+            margin: 0;
+            margin-top: 24px;
+            padding: 0;
+            list-style: none;
+            
+            li {
+                float: left;
+                padding: 6px;
+                margin: 4px;
+                color: #222;
+                cursor: pointer;
+                background: #fff;
+                border-radius: 4px;
+                border: 2px solid #d3d3d3;
+                
+                &.area-selected {
+                    color: #fff;
+                    background: #4A90E2;
+                    border-color: #31708f;
+                }
+                
+                &.area-hover {
+                    color: #fff;
+                    background: #4A90E2;
+                    border-color: #31708f;
+                }
+                
+                &:hover {
+                    color: #fff;
+                    background: #4A90E2;
+                    border-color: #31708f;
+                }
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+        }
+    }
+}

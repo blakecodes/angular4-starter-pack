@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Damage Area</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+        <style>
+            .line-drawing {
+                width: 100%;
+            }
+
+            .area-list {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .area-list li {
+                float: left;
+                padding: 6px;
+                margin: 4px;
+                color: #222;
+                cursor: pointer;
+                background: #fff;
+                border-radius: 4px;
+                border: 2px solid #d3d3d3;
+            }
+
+
+            .area-list li.area-selected {
+                color: #fff;
+                background: #4A90E2;
+                border-color: #31708f;
+            }
+
+
+            .area-list li.area-hover {
+                color: #fff;
+                background: #4A90E2;
+                border-color: #31708f;
+            }
+            
+            .area-list li:hover {
+                color: #fff;
+                background: #4A90E2;
+                border-color: #31708f;
+            }
+
+            .area-list:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div id="imageMapContainer" class="col-md-12"></div>
+            </div>
+            <div class="row">
+                <ul class="col-md-12 area-list" id="area-select-list">
+                </ul>
+            </div>
+            <!-- <div class="row">
+                <ul class="col-md-4 area-list">
+                    <li data-for="side-left-engine">Left Engine</li>
+                    <li>Left Wing</li>
+                    <li data-for="side-left-rear-wing">Rear Wing</li>
+                </ul>
+                <ul class="col-md-4 area-list">
+                    <li>Rear Engine</li>
+                    <li>Front Landing Gear</li>
+                </ul>
+                <ul class="col-md-4 area-list">
+                    <li>Right Engine</li>
+                    <li>Right Wing</li>
+                </ul>
+            </div> -->
+        </div>
+
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+            <script src="assets/js/jquery.maphilight.js" type="text/javascript"></script>
+        <!-- -->
+
+        <script type="text/javascript">
+            var mapData = {
+                "image": {
+                    "src": "img/B787-800v1.png",
+                    "width": 1140,
+                    "height": 781
+                },
+                "damageAreas": [
+                    {
+                        "id": "leftEngine",
+                        "title": "Left Engine",
+                        "areas": [
+                            {
+                                "view": "top",
+                                "coords": "168,554,261,606",
+                                "shape": "rect"
+                            },
+                            {
+                                "view": "side",
+                                "coords": "163,130,267,187",
+                                "shape": "rect"
+                            },
+                            {
+                                "view": "front",
+                                "coords": "918,127,974,181",
+                                "shape": "rect"
+                            },
+                            {
+                                "view": "front-cutaway",
+                                "coords": "917,315,972,364",
+                                "shape": "rect"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "rearLeftWing",
+                        "title": "Left Rear Wing",
+                        "areas": [
+                            {
+                                "view": "top",
+                                "coords": "463,494,560,587",
+                                "shape": "rect"
+                            },
+                            {
+                                "view": "side",
+                                "coords": "458,107,562,148",
+                                "shape": "rect"
+                            }
+                        ]
+                    }
+                ]
+            }
+
+
+
+            var buildImageMap = function() {
+                var i,
+                    j,
+                    image,
+                    damageArea,
+                    id,
+                    areas,
+                    area,
+                    view,
+                    coords,
+                    areaId,
+                    shape,
+                    areasList,
+                    $area,
+                    areaId,
+                    comma,
+                    $imageMapContainer = $('#imageMapContainer'),
+                    $imageMap,
+                    $map,
+                    $areaSelectList = $('#area-select-list'),
+                    mapHighlight = { 
+                        "strokeColor": "FF0000", 
+                        "fillColor": "000000", 
+                        "fillOpacity": 0.25, 
+                        "alwaysOn": false 
+                    };
+
+                $imageMap = $('<img />')
+                                .attr('id', 'damageAreMapImage')
+                                .attr('src', mapData.image.src)
+                                .attr('width', mapData.image.width)
+                                .attr('height', mapData.image.height)
+                                .attr('usemap', '#damageAreaMap');
+
+                $map = $('<map name="damageAreaMap"></map>');
+
+                $imageMapContainer.append($imageMap).append($map);
+
+                for ( i = 0; i < mapData.damageAreas.length; i++ ) {
+                    damageArea = mapData.damageAreas[i];
+                    id         = damageArea.id;
+                    areas      = damageArea.areas;
+                    areasList  = '';
+
+                    for ( j = 0; j < areas.length; j++ ) {
+                        area      = areas[j];
+                        view      = area.view;
+                        shape     = area.shape;
+                        coords    = area.coords;
+                        areaId    = view + '-' + id;
+                        comma     = (j > 0)? ',' : '';
+                        areasList += comma + areaId;
+
+                        $area = $('<area />');
+                        
+                        //
+                        // Add all attributes and event handling to $area
+                        $area
+                            .attr('id', areaId)
+                            .attr('coords', coords)
+                            .attr('data-for', id)
+                            .attr('href', 'javascript: void(0);')
+                            .attr('shape', shape)
+                            .attr('data-maphilight', JSON.stringify(mapHighlight))
+                            .on('mouseover', function() {
+                                var $this = $(this);
+                                var $id   = $this.attr('id');
+                                var $for  = $this.data('for');
+                                var $li   = $('li#li-' + $for);
+
+                                if ( !$li.hasClass('area-hover') ) {
+                                    $li.addClass('area-hover');
+                                }
+                            })
+                            .on('mouseout', function() {
+                                var $this = $(this);
+                                var $id   = $this.attr('id');
+                                var $for  = $this.data('for');
+                                var $li   = $('li#li-' + $for);
+
+                                $li.removeClass('area-hover');
+
+                            })
+                            .on('click', function(e) {
+                                var $this = $(this);
+                                var $id   = $this.attr('id');
+                                var $li   = $('li#li-' + id);
+                                
+                                if ( $li.hasClass('area-selected') ) {
+                                    $li.removeClass('area-selected');
+                                } else {
+                                    $li.addClass('area-selected');
+                                }
+
+                                e.preventDefault();
+                            });
+                        //
+
+                        $map.append($area);
+                    }
+
+                    $areaSelectList.append('<li id="li-' + id + '" data-for="' + areasList + '">' + damageArea.title + '</li>');
+
+                }
+            }
+
+
+            buildImageMap();
+        </script>
+
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#damageAreMapImage').maphilight();
+
+                $('li[data-for]').each(function() {
+                    var $this = $(this);
+                    var $for  = $this.data('for');
+                    var forArr = $for.split(',');
+
+                    $this
+                        .on('mouseover', function() {
+                            for ( var i = 0; i < forArr.length; i++ ) {
+                                $('#' + forArr[i]).mouseover();
+                            }
+
+                        })
+                        .on('mouseout', function() {
+                            for ( var i = 0; i < forArr.length; i++ ) {
+                                $('#' + forArr[i]).mouseout();
+                            }
+
+                        })
+                        .on('click', function() {
+                            if ( $this.hasClass('area-selected') ) {
+                                $this.removeClass('area-selected');
+                            } else {
+                                $this.addClass('area-selected');
+                            }
+
+                        });
+                });
+
+            });
+        </script>
+    </body>
+</html>

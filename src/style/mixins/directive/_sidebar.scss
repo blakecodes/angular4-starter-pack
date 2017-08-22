@@ -1,0 +1,299 @@
+
+
+/* **** */
+#toggle-sidebar {
+  position: fixed;
+  top: 2px;
+  left: 5px;
+  color: #FFF;
+  background: $dnrspurple;
+  font-size: 18px;
+  z-index: 201;
+  display: none;
+}
+/* **** */
+
+
+
+
+/* **** */
+.sidebar {
+    border-radius: 0;
+    position: fixed;
+    z-index: 3;
+    top: 66px;
+    left: 225px;
+    width: 225px;
+    margin-left: -225px;
+    border: none;
+    border-radius: 0;
+    overflow-y: auto;
+    background-color: $sidebar-background-color;
+    bottom: 0;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+    @include box-shadow(1px, 0, 2px, rgba(0,0,0,0.1));
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+
+    .sidebar-profile {
+        background: $grey_lighter;
+        padding: 15px 6px;
+        border-bottom: 1px solid rgba(0,0,0,0.07);
+
+        .avatar-wrapper {
+            padding: 8px 4px;
+
+            h6 {
+                display: table-cell;
+                font-size: 1.0em;
+                color: $fontcolordark;
+                vertical-align: middle;
+                padding-left: 8px;
+            }
+
+            .avatar {
+                display: table-cell;
+
+                img {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .icon-row {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+            a {
+                position: relative;
+                display: inline-block;
+                margin: 0 8px 0 0;
+                padding: 0;
+                width: 30px;
+                height: 24px;
+                border: 1px solid $fontcolordark;
+                border-radius: 3px;
+                color: $fontcolordark;
+
+                i.fa {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .badge {
+                    display: inline-block;
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    width: 14px;
+                    height: 14px;
+                    line-height: 14px;
+                    vertical-align: middle;
+                    font-size: 0.8em;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: $dnrsgreen;
+                    color: $grey_lightest;
+                    @include box-shadow(1px, 1px, 2px, rgba(0,0,0,0.3));
+                }
+
+                &:hover {
+                    background: $dnrsgold;
+                    color: $grey_lightest;
+                    border-color: darken($dnrsgold, 15%);
+                    border-radius: 3px;
+                }
+                
+            }
+        }
+    }
+
+
+    .list-group {
+        
+        $a-grad-left: $sidebar-background-color;
+        $a-grad-right: darken($a-grad-left, 5%);
+        
+        $i-grad-left: transparent;
+        $i-grad-right: $dnrsgold;
+
+        a.list-group-item {
+            padding: 0 8px 0 0;
+            position: relative;
+            background: $sidebar-background-color;
+            border-radius: 0;
+            margin: 0;
+            color: $grey_dark;
+            text-decoration: none;
+            border: 0;
+            border-bottom: 1px solid rgba(0,0,0,0.07);
+            background: linear-gradient(to left, $a-grad-left 50%, $a-grad-right 50%);
+            background-size: 200% 100%;
+            background-position:right bottom;
+            -webkit-transition: all ease 0.2s;
+            -moz-transition: all ease 0.2s;
+            transition: all ease 0.2s;
+
+
+            &:first-child {
+                @include box-shadow(0, -1px, 2px, rgba(0,0,0,0.09));
+            }
+          
+              
+            i.fa {
+                display: inline-block;
+                font-size: 1.4em;
+                padding: 12px 0;
+                margin-right: 8px;
+                width: 48px;
+                text-indent: 0;
+                text-align: center;
+                border-right: 1px solid #d3d3d3;
+                background: linear-gradient(to left, $i-grad-left 50%, $i-grad-right 50%);
+                background-size: 200% 100%;
+                background-position:right bottom;
+                -webkit-transition: all ease 0.3s;
+                -moz-transition: all ease 0.3s;
+                transition: all ease 0.3s;
+            }
+
+            &:hover {
+                // background: darken($sidebar-background-color, 5%);
+                background-position:left bottom;
+
+                .fa {
+                    color: $grey_lightest;
+                    border-right-color: $dnrsgold;
+                    // background: $dnrsgold;
+                    background-position:left bottom;
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    margin-top: -10px;
+                    width: 0; 
+                    height: 0; 
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent; 
+                    border-right:10px solid $dnrsgold; 
+                }
+            }
+
+            &.is-active {
+                background: darken($sidebar-background-color, 5%);
+                border-left: 4px solid $dnrsblue;
+
+                .fa {
+                    color: $dnrsblue;
+                    display: inline-block;
+                    margin-right: 14px;
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    margin-top: -10px;
+                    width: 0; 
+                    height: 0; 
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent; 
+                    border-right:10px solid $dnrsblue; 
+                }
+
+                &:hover {
+                    border-left-color: $dnrsgold;
+                    background: darken($sidebar-background-color, 10%);
+
+                    .fa {
+                        color: $grey_lightest;
+                    }
+
+                    &:after {
+                        border-right-color: $dnrsgold;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .sidebar-dropdown {
+
+        *:focus {
+            border-radius: none;
+            border:none;
+        }
+
+        .panel-title {
+            font-size: 1.4rem;
+            margin-bottom: 0;
+
+            a {
+                color: #999;
+                text-decoration: none;
+                font-weight: 400;
+                background: $sidebar-background-color;
+
+                span {
+                    position: relative;
+                    display: block;
+                    padding: .75rem 1.5rem;
+                    padding-top:1rem;
+                }
+            }
+
+            a:hover,a:focus {
+                color: #fff;
+                outline: none;
+                outline-offset: -2px;
+            }
+
+        }
+
+        .panel-title:hover {
+            background: darken($sidebar-background-color, 5%);
+        }
+
+        .panel-collapse {
+            border-radius :0;
+            border: none;
+
+            .panel-body {
+
+                .list-group-item {
+                    border-radius : 0;
+                    background-color: $sidebar-background-color;
+                    border: 0 solid transparent;
+
+                    a { 
+                        color: $fontcolordark; 
+
+                        &:hover { 
+                            color:#FFF; 
+                        }
+                    }
+                }
+
+                .list-group-item:hover {
+                    background : darken($sidebar-background-color, 5%);
+                }
+            }
+        }
+    }
+}
+/* **** */

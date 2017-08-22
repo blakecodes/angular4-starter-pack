@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target":"es5",
+        "module": "commonjs",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "noEmitHelpers": true
+    },
+    "compileOnSave": false,
+    "buildOnSave": false,
+    "exclude": [
+        "node_modules",
+        "typings/main.d.ts",
+        "typings/main"
+    ],
+    "filesGlob": [
+        "./src/**/*.ts",
+        "./src/**/*.js",
+        "./test/**/*.ts",
+        "!./node_modules/**/*.ts",
+        "src/custom_typings.d.ts",
+        "typings/browser.d.ts"
+    ]
+}

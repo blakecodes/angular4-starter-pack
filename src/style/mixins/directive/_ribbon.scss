@@ -1,0 +1,88 @@
+ribbon {
+    display: block;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div[ribbonparent] {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 60%;
+    padding: 8px;
+    border: 1px solid $grey_light;
+    border-top: 0;
+    background: rgba(255,255,255, 1);
+    border-radius: 0 0 8px 8px;
+    @include box-shadow(0, 0, 10px, rgba(0,0,0,0.1));
+    max-height: 400px;
+    overflow-y: auto;
+    
+    .ribbon-message {
+        position: relative;
+        max-width: 100%;
+        margin: 8px auto;
+        padding: 12px;
+        text-align: left;
+        background: $info;
+        border: 1px solid $info_border;
+        color: $info_text;
+        border-radius: 4px;
+        @include box-shadow(0, 0, 8px, rgba(0,0,0,0.1));
+        
+        &:first-child {
+            margin-top: 0;
+        }
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+        
+        &.info {
+            background: $info;
+            border: 1px solid $info_border;
+            color: $info_text;
+        }
+        
+        &.success {
+            background: $success;
+            border: 1px solid $success_border;
+            color: $success_text;
+        }
+        
+        &.warn {
+            background: $warn;
+            border: 1px solid $warn_border;
+            color: $warn_text;
+        }
+        
+        &.danger {
+            background: $danger;
+            border: 1px solid $danger_border;
+            color: $danger_text;
+        }
+        
+        .ribbon-close {
+            position: absolute;
+            right: 12px;
+            top: 16px;
+            font-size: 16px;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+ribbon.login-signup {
+    div[ribbonparent] {
+        background: rgba(100,100,100,0.4);
+        border-color: $grey_darker;
+    }
+}
